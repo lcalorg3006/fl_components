@@ -1,5 +1,6 @@
 import 'package:fl_components/screens/listview1_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:fl_components/router/app_routes.dart';
 
 class HomeScreen extends StatelessWidget {
    
@@ -15,14 +16,14 @@ class HomeScreen extends StatelessWidget {
      ),
       body: ListView.separated(
         itemBuilder:(context, index)=>ListTile(
-          leading: const Icon(Icons.access_time_filled_outlined),
-          title: const Text("Nombre de ruta"),
+          leading: Icon(AppRoutes.MenuOptions[index].icon),
+          title: Text(AppRoutes.MenuOptions[index].name),
           onTap: (){
-            Navigator.pushNamed(context, 'card1234');
+            Navigator.pushNamed(context, AppRoutes.MenuOptions[index].route);
           }
         ),
         separatorBuilder: (context, index) => const Divider(),
-        itemCount: 5,
+        itemCount: AppRoutes.MenuOptions.length,
         ),
       );
     
