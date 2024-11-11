@@ -18,6 +18,10 @@ class AppTheme {
       listTileTheme: const ListTileThemeData(
         iconColor: primary,
       ),
+      // text button theme
+      textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(foregroundColor: primary),
+      )
 
       );
        //theme:themeData.dark   // modo oscuro
