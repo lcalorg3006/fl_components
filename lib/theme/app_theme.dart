@@ -11,12 +11,14 @@ class AppTheme {
         //color primario
         appBarTheme: const AppBarTheme(
         color: primary,
-        titleTextStyle: TextStyle(color: Colors.white, fontSize: 24)
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 24),
+        iconTheme: IconThemeData(color: Colors.white)
         ),
         // para que los iconos salgan naranja tambien
       listTileTheme: const ListTileThemeData(
         iconColor: primary,
-      )
+      ),
+
       );
        //theme:themeData.dark   // modo oscuro
 }
