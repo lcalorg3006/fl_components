@@ -21,8 +21,14 @@ class AppTheme {
       // text button theme
       textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(foregroundColor: primary),
-      )
+      ),
 
+      floatingActionButtonTheme: const FloatingActionButtonThemeData(
+        backgroundColor: primary,
+        shape: StadiumBorder(),//botton redonde
+        elevation: 5,//sombreado
+        foregroundColor: Colors.white,//texto en blanco
+      )
       );
        //theme:themeData.dark   // modo oscuro
 }
