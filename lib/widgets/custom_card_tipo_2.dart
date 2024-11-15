@@ -28,7 +28,7 @@ class CustomCardTipo2 extends StatelessWidget {
           fadeInDuration: const Duration(milliseconds: 3000),
           ),
 
-          // si el nombre no es null  le ponemos leyenda
+          // si el nombre no es null  le ponemos leyenda disaparece el container de abajo
           if(nombre != null)
           //leyendo a la imagen
           Container(
@@ -36,7 +36,7 @@ class CustomCardTipo2 extends StatelessWidget {
             alignment: AlignmentDirectional.centerEnd,
             //separacion de 10, no este todo pegado al borde de la derecha
             padding: const EdgeInsets.only(top:10, bottom: 10, right: 20),
-            child: Text( nombre ?? '   ' )
+            child: Text( nombre ?? 'desconocido' )
             )
         ],
       ),
