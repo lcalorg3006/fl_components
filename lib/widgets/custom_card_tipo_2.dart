@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 
 class CustomCardTipo2 extends StatelessWidget {
   
-  const CustomCardTipo2({super.key});
+  final String imageUrl;
+  final String? nombre;
+  const CustomCardTipo2({super.key, required this.imageUrl, this.nombre});
 
   @override
   Widget build(BuildContext context) {
@@ -15,23 +17,26 @@ class CustomCardTipo2 extends StatelessWidget {
       ),
       child: Column(
         children: [
-          const FadeInImage(
-          image: NetworkImage('https://images7.alphacoders.com/928/928770.jpg',), 
-          placeholder: AssetImage('assets/jar-loading.gif'),
+         FadeInImage(
+          image: NetworkImage( imageUrl ), 
+          placeholder: const AssetImage('assets/jar-loading.gif'),
           width: double.infinity,
           height: 260,
           // quitar margenes
           fit:BoxFit.cover,
   // especificamos duracion
-          fadeInDuration: Duration(milliseconds: 3000),
+          fadeInDuration: const Duration(milliseconds: 3000),
           ),
+          
+          // si el nombre no es null  le ponemos leyenda
+          if(nombre != null)
           //leyendo a la imagen
           Container(
             //alinea el texto a la derecha de un alignment
             alignment: AlignmentDirectional.centerEnd,
             //separacion de 10, no este todo pegado al borde de la derecha
             padding: const EdgeInsets.only(top:10, bottom: 10, right: 20),
-            child: const Text('Final Fantasy 7')
+            child: Text( nombre ?? 'Desconocido' )
             )
         ],
       ),

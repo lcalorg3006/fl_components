@@ -16,9 +16,15 @@ class CardScreen extends StatelessWidget {
           children: const [
             CustomCardTipo1(),
             SizedBox(height: 10),
-            CustomCardTipo2(),
+            CustomCardTipo2(nombre: 'final Fantasy 7',imageUrl: 'https://images7.alphacoders.com/928/928770.jpg',),
               SizedBox(height: 10),
-            CustomCardTipo2(),
+            CustomCardTipo2(nombre: 'Age of empires',imageUrl:  'https://microsofters.com/wpcontent/uploads/2018/02/AOEDE_KeyArt_Horiz_RGB_Final.jpg'),
+             SizedBox(height: 10),
+            CustomCardTipo2(imageUrl: 'https://expansivedlc.com/wp-content/uploads/2022/08/secret-of-monkeyisland-special-dosgamers-2.jpg'),
+             SizedBox(height: 10),
+            CustomCardTipo2(imageUrl: 'https://sm.ign.com/ign_es/screenshot/default/metal-gear1_s2be.jpg'),
+             SizedBox(height: 10),
+            CustomCardTipo2(imageUrl: 'https://cdn-ext.fanatical.com/production/product/1280x720/fa491738-d6fa4ae9-8167-bd6bd14ca640.jpeg'),
           
           ],
         ));
