@@ -25,7 +25,7 @@ class CustomCardTipo2 extends StatelessWidget {
           // quitar margenes
           fit:BoxFit.cover,
   // especificamos duracion
-          fadeInDuration: const Duration(milliseconds: 3000),
+          fadeInDuration: const Duration(milliseconds: 300),
           ),
 
           // si el nombre no es null  le ponemos leyenda disaparece el container de abajo
