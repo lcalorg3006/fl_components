@@ -17,15 +17,12 @@ class CustomCardTipo2 extends StatelessWidget {
       ),
       child: Column(
         children: [
-         FadeInImage(
-          image: NetworkImage( imageUrl ), 
-          placeholder: const AssetImage('assets/jar-loading.gif'),
-          width: double.infinity,
-          height: 260,
-          // quitar margenes
-          fit:BoxFit.cover,
-  // especificamos duracion
-          fadeInDuration: const Duration(milliseconds: 300),
+      
+         Image.network(
+            imageUrl,
+            width: double.infinity,
+            height: 260,
+            fit: BoxFit.cover,
           ),
 
           // si el nombre no es null  le ponemos leyenda disaparece el container de abajo
