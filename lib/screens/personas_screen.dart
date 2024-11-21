@@ -34,6 +34,12 @@ class PersonajesScreen extends StatelessWidget {
           ),
         ],
       ),
+        floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.close),
+        onPressed: () {
+          Navigator.pop(context);
+        },
+      ),
     );
   }
 }
