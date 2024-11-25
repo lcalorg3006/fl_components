@@ -5,11 +5,12 @@ class AlertScreen extends StatelessWidget {
   const AlertScreen({Key? key}) : super(key: key);
   void displayDialog(BuildContext context){
     showDialog(
-      barrierDismissible: true,// fuera de la alerta se sale
+      barrierDismissible: false,// true.fuera de la alerta se sale // false no se sale se queda colgado
       context: context,
        builder: (context){
         return  AlertDialog(
           title: Text('Alerta'),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadiusDirectional.circular(15)),
           content: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -18,6 +19,11 @@ class AlertScreen extends StatelessWidget {
               FlutterLogo(size: 100)
             ],
           ),
+          actions: [
+            TextButton(
+              onPressed: ()=> Navigator.pop(context), 
+              child: const Text('Cerrar'))
+          ],
         );
        });
     }

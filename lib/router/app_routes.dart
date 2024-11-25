@@ -11,6 +11,7 @@ class AppRoutes {
     MenuOption(route: 'listview2', icon: Icons.list, name: "Listview tipo 2", screen:const  Listview2Screen()),
     MenuOption(route: 'alert', icon: Icons.add_alert_outlined, name: "Alertas", screen:const  AlertScreen()),
     MenuOption(route: 'card', icon: Icons.card_giftcard, name: "Tarjetas - Cards", screen:const  CardScreen()),
+    MenuOption(route: 'avatar', icon: Icons.person_4_outlined, name: 'Avatar', screen: AvatarScreen())
 
   ];
 
