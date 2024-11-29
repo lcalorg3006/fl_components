@@ -38,10 +38,20 @@ class AppTheme {
       )),
 
       //inputDecoration
-      inputDecorationTheme: const InputDecorationTheme(
-        
-
-
-      ));
+      inputDecorationTheme:  InputDecorationTheme(
+        floatingLabelStyle:const  TextStyle(color: primary), // letra de arriba
+        enabledBorder: OutlineInputBorder( // border sin foco
+          borderSide: const BorderSide(color: primary),
+          borderRadius: BorderRadius.circular(10)
+        ),
+        focusedBorder: OutlineInputBorder( // border con foco
+          borderSide: const BorderSide(color: primary),
+          borderRadius: BorderRadius.circular(10)),
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10)
+          )
+        )
+      
+      );
   //theme:themeData.dark   // modo oscuro
 }
