@@ -1,65 +1,56 @@
+import 'package:fl_components/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 class InputsScreen extends StatelessWidget {
-   
   const InputsScreen({Key? key}) : super(key: key);
-  
-  @override
-  Widget build(BuildContext context) {
-    return  Scaffold(
-      appBar: AppBar(
-        title: const Text("From: Inputs"),
-      ),
-      body: SingleChildScrollView(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-        child:Column(
-          children: [
-            custom_text_form_field()
-          ],
-        )
-      )
-    );
-  }
-}
-
-class custom_text_form_field extends StatelessWidget {
-  const custom_text_form_field({
-    super.key,
-  });
 
   @override
   Widget build(BuildContext context) {
-    return TextFormField(
-      autofocus: true,
-      //initialValue: 'Lorena Calderon',// que aparezca por defecto es un coñazp porque tienes que borrar
-      textCapitalization: TextCapitalization.words,// la primera en mayuscula
-      onChanged: (value) { // para guardar  el valor del formulario
-        print('value : $value');
-      },
-      // balidar si nuestro inpput tiene mas de 4 caracteres
-      validator: (value){
-        if(value!.length < 3){
-          return 'Minimo 3 Caracteres';
-        }
-      },
-      autovalidateMode: AutovalidateMode.onUserInteraction,
-      decoration: const InputDecoration(
-        hintText: 'Nombre',// aparezca en el fondo como si fuero por defecto
-        labelText: 'Nombre',// arriba
-        helperText: 'solo letras',// aparece debajo
-        suffixIcon: Icon(Icons.group_outlined) ,// icono de a la derecha
-        //prefixIcon: Icon(Icons.verified_user_outlined),// icono de la izquierda de validacion
-        icon:Icon(Icons.assignment_ind_outlined),// icono de la izquierda pero desplaza la linea
-        // border
-       // border:OutlineInputBorder(
-        //  borderRadius: BorderRadius.only(
-         //   bottomLeft: Radius.circular(10),
-        //    topRight: Radius.circular(10),
-        //  )
-        //)
-    // elevatedButton
-    
-      ),
-    );
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text("From: Inputs"),
+        ),
+        body: const SingleChildScrollView(
+            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            child: Column(
+              children: [
+                customTextFormField(
+                  hintText: 'Nombre',
+                  labelText: 'Nombre del usuario',
+                  helperText: 'Solo Letras',
+                  icon: Icons.verified_outlined,
+                  suffixIcon: Icons.person_2_rounded,
+                  obscureText: false,
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                customTextFormField(
+                  hintText: 'Apellidos',
+                  labelText: 'Apellidos del usuario',
+                  icon: Icons.person_4_outlined,
+                  obscureText: false,
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                customTextFormField(
+                  hintText: 'E-mail',
+                  labelText: 'E-mail del usuario',
+                  icon: Icons.email_rounded,
+                  keyboardType: TextInputType.emailAddress,
+                  obscureText: false,
+                ),
+                SizedBox(
+                  height: 30,
+                ),
+                customTextFormField(
+                  hintText: 'Contraseña',
+                  labelText: 'Contraseña del usuario',
+                  icon: Icons.password_rounded,
+                  obscureText: true,
+                ),
+              ],
+            )));
   }
 }
