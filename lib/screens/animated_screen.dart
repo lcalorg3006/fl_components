@@ -41,6 +41,8 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
             
           });
           // TAREA CREAR UNA FUNCION ALEATORIO QUE CREE WIDTH Y HEIGH DE FORMA ALEATORIO CON LIMITES
+          // var intValue = Random().nextInt(300);
+          // intValue = Random.nextInt(300)+20
           // PARA EL COLOR CREAR UNA LISTA CON VARIOS COLORES Y QUE ESCOGA ALEATORIAMENTE UNA POSICION DE LA LISTA
         },
         child: const Icon(Icons.play_circle, size :35),

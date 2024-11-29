@@ -31,10 +31,17 @@ class AppTheme {
       //ElevatedButtons
       elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-             backgroundColor: primary,
-             foregroundColor: Colors.white,
-             shape: const StadiumBorder(),
-             elevation: 5,
-      )));
+        backgroundColor: primary,
+        foregroundColor: Colors.white,
+        shape: const StadiumBorder(),
+        elevation: 5,
+      )),
+
+      //inputDecoration
+      inputDecorationTheme: const InputDecorationTheme(
+        
+
+
+      ));
   //theme:themeData.dark   // modo oscuro
 }

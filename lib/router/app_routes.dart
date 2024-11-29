@@ -1,3 +1,4 @@
+import 'package:fl_components/screens/inputs_screen.dart';
 import 'package:fl_components/screens/screens.dart';
 import 'package:flutter/material.dart';
 import 'package:fl_components/models/models.dart';
@@ -12,7 +13,8 @@ class AppRoutes {
     MenuOption(route: 'alert', icon: Icons.add_alert_outlined, name: "Alertas", screen:const  AlertScreen()),
     MenuOption(route: 'card', icon: Icons.card_giftcard, name: "Tarjetas - Cards", screen:const  CardScreen()),
     MenuOption(route: 'avatar', icon: Icons.person_4_outlined, name: 'Avatar', screen: const AvatarScreen()),
-    MenuOption(route: 'animated', icon: Icons.play_circle_outline_rounded, name: 'Animated container', screen: const AnimatedScreen())
+    MenuOption(route: 'animated', icon: Icons.play_circle_outline_rounded, name: 'Animated container', screen: const AnimatedScreen()),
+    MenuOption(route: 'inputs', icon: Icons.input_rounded, name: 'forms: inputs', screen: InputsScreen())
 
 
   ];
