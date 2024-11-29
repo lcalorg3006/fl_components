@@ -10,8 +10,11 @@ class customTextFormField extends StatelessWidget {
   final TextInputType? keyboardType;
   final bool obscureText;// para el cammpo contraseña que no aparezca
   
+  final String formProperty;
+  final Map<String, String> formValues;
+
   const customTextFormField({
-    super.key, this.hintText, this.labelText, this.helperText, this.icon, this.suffixIcon, this.keyboardType, required this.obscureText,
+    super.key, this.hintText, this.labelText, this.helperText, this.icon, this.suffixIcon, this.keyboardType, required this.obscureText, required this.formProperty, required this.formValues,
   });
 
   @override
@@ -22,9 +25,11 @@ class customTextFormField extends StatelessWidget {
       textCapitalization: TextCapitalization.words,// la primera en mayuscula
       keyboardType: keyboardType, // para que salga el @ en la pantalla principal
       obscureText: obscureText,
-      onChanged: (value) { // para guardar  el valor del formulario
-        print('value : $value');
-      },
+     // onChanged: (value) { // para guardar  el valor del formulario
+       
+        //print('value : $value');
+      //},
+      onChanged: (value) => formValues[formProperty] = value,
       // balidar si nuestro inpput tiene mas de 4 caracteres
       validator: (value){
         if(value!.length < 3){
