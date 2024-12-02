@@ -15,6 +15,10 @@ class InputsScreen extends StatelessWidget {
       'password': 'lorena',
       'role': 'usuario'
     };
+    // valor por defecto de checkbox
+//    bool _checkEnabled = true;
+  final ValueNotifier<bool> _checkEnabled = ValueNotifier<bool>(true);
+
     return Scaffold(
         appBar: AppBar(
           title: const Text("From: Inputs"),
@@ -84,10 +88,35 @@ class InputsScreen extends StatelessWidget {
                             value: 'administrador', child: Text('Admnistrador')),
                       ],
                       onChanged: (value) {
+                
                         print(value);
                         formValues['role'] = value ?? 'usuario';
                       }),
                   const SizedBox(
+                    height: 30,
+                  ),
+                  // para que te reincie la pantalla pero te mantenga los valores del formularios
+                  ValueListenableBuilder<bool>(
+                    valueListenable: _checkEnabled,
+                    // _ para ignorar valores
+                     builder: (context, value, _){
+                      return Checkbox(
+                      value: value,
+                       onChanged: (newValue){ 
+                          _checkEnabled.value = newValue ?? true;
+                       },);
+                     }
+                     ),
+                  /*Checkbox(
+                    value: _checkEnabled, 
+                    onChanged: (value){
+                      _checkEnabled = value ?? true;
+                      setState((){
+
+                      });
+                    },
+                    ),*/
+                    const SizedBox(
                     height: 30,
                   ),
                   ElevatedButton(
