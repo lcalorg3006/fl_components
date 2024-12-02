@@ -29,7 +29,10 @@ class customTextFormField extends StatelessWidget {
        
         //print('value : $value');
       //},
-      onChanged: (value) => formValues[formProperty] = value,
+      onChanged: (value) { formValues[formProperty] = value;
+      // para consultar valores predeterminado en terminal
+      print('Update formValues: ${formValues.toString()}');
+      },
       // balidar si nuestro inpput tiene mas de 4 caracteres
       validator: (value){
         if(value!.length < 3){
