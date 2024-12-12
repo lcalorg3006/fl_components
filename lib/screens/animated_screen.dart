@@ -44,6 +44,14 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
           // var intValue = Random().nextInt(300);
           // intValue = Random.nextInt(300)+20
           // PARA EL COLOR CREAR UNA LISTA CON VARIOS COLORES Y QUE ESCOGA ALEATORIAMENTE UNA POSICION DE LA LISTA
+          /*
+          onPressed:(){
+          _width = _random.nextDouble() * 300+1;
+          _color = Color(_random.nextDouble() * 0xFFFFFF).toInt()).widtOpacity(1.0);
+          setState((){
+          }
+          }
+          */ 
         },
         child: const Icon(Icons.play_circle, size :35),
         ),
