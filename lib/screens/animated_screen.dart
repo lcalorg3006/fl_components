@@ -11,7 +11,7 @@ class AnimatedScreen extends StatefulWidget {
 
 class _AnimatedScreenState extends State<AnimatedScreen> {
   double _width1 = 50; // barra baja privada
-  double _height = 50;
+  double _height1 = 50;
   Color _color = Colors.green;
   BorderRadiusGeometry _borderRadius = BorderRadius.circular(10);
   final Random _random = Random();
@@ -26,7 +26,7 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
         child: Container(
           // container muy similar a div
           width: _width1,
-          height: _height,
+          height: _height1,
           decoration: BoxDecoration(
             color: _color,
             borderRadius: _borderRadius,
@@ -57,7 +57,7 @@ class _AnimatedScreenState extends State<AnimatedScreen> {
         child: const Icon(Icons.play_circle, size: 35),
         onPressed: () {
           _width1 = _random.nextDouble() * 300 + 1;
-          _height = _random.nextDouble() * 300 + 1;
+          _height1 = _random.nextDouble() * 300 + 1;
           _color =
               Color((_random.nextDouble() * 0xFFFFFF).toInt()).withOpacity(1.0);
           setState(() {});
